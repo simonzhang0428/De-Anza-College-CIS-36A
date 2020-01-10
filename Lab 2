@@ -1,0 +1,93 @@
+
+De Anza College CIS
+Home
+CIS36A
+CIS36B
+CIS22C
+Lab 2: Searching an Array (100 pts)
+Due Monday, January 13 at 9:20am on Canvas
+
+
+Pair Programming Required (50 point deduction)
+Both partners fill in, sign, date, and submit the pair programming contract
+Upload the document(s) along with your Lab code to Canvas.
+Only ONE partner submits the Lab code on Canvas.
+BOTH partners submit the contract.
+Please make sure both your names are on all the files.
+If you need help finding a partner, please contact me as soon as possible.
+
+Halley's Comet
+According to Dictionary.com a comet is "a celestial body moving about the sun, usually in a highly eccentric orbit, consisting of a central mass surrounded by an envelope of dust and gas that may form a tail that streams away from the sun."
+Perhaps the most famous comet is Halley's Comet, which is bright enough to be visible to the human eye when it comes close enough to earth, and has the habit of appearing in the sky at meaningful moments throughout history.
+Interestingly, its orbit is what is known as "retrograde", meaning that it travels around the sun in the opposite direction of the planets.
+Halley's is considered a short-period comet because its orbit is under 200 years, as opposed to some comets with orbits more than thousands of years long.
+In fact, it appears in the sky every 74-79 years. Did/will Halley's appear during your lifetime?
+Assume that you are given a text file named years.txt containing the years in which Halley's comet has been visible from earth, starting in 240BC, or will be visible in the "near" future. This file has the following contents:
+240BC, 164BC, 87BC, 12BC, 66, 141, 218, 295, 374, 451, 530, 607, 684, 760, 837, 912, 989, 1066, 1145, 1222, 1301, 1378, 1456, 1531, 1607, 1682, 1758, 1835, 1910, 1986, 2061, 2134,
+
+Without altering the file from the above format (i.e. you are not allowed to erase the commas or alter the spacing or order), write a program that will prompt a user to enter a year between 240BC and 2200, and then report whether Halley's comet was visible during that year.
+The user should be able to continue entering years, until pressing 'x' to end the program.
+To receive credit, your program must:
+Read the numbers from the file
+Store them in an array of ints
+Implement a binary search method to search for the year entered by the user, by writing a binary search method with the following signature:
+public static int binarySearch(int[] dates, int year) {
+Your program should be named Halleys.java and must work identically to the sample output shown below:
+Welcome!
+
+Enter a year between 240BC and 2200 or 'x' to exit: 67
+Halley's Comet did not appear in the year 67.
+
+Enter a year between 240BC and 2200 or 'x' to exit: 66
+Halley's Comet did appear in the year 66.
+
+Enter a year between 240BC and 2200 or 'x' to exit: 2020
+Halley's Comet will not appear in the year 2020.
+
+Enter a year between 240BC and 2200 or 'x' to exit: 2061
+Halley's Comet will appear in the year 2061.
+
+Enter a year between 240BC and 2200 or 'x' to exit: 87BC
+Halley's Comet did appear in the year 87BC.
+
+Enter a year between 240BC and 2200 or 'x' to exit: 88BC
+Halley's Comet did not appear in the year 88BC.
+
+Enter a year between 240BC and 2200 or 'x' to exit: 300BC
+Invalid date!
+
+Enter a year between 240BC and 2200 or 'x' to exit: 2300
+Invalid date!
+
+Enter a year between 240BC and 2200 or 'x' to exit: x
+
+Goodbye!
+
+Additionally, your program should meet the below requirements:
+Your program should adjust for future dates starting in 2020 to state "will appear" or "will not appear." See above examples.
+Also, your program must be able to handle dates that contain BC. Hint: Check whether a date has an ending of "BC", and then handle this case differently from AD numbers.
+Additionally, you should assume that you do not know the number of dates in the input file, and write your program accordingly.
+Finally, your program should do error checking for cases in which the user types a date that falls outside the range of 240BC to 2200. No other error checking is required.
+Style requirements:
+You should use proper indentation. If uncertain, remember to go to Source->Format on Eclipse to autoformat your code
+Your method(s) should each have a full Javadoc comment placed above the method. See lesson 1 notes on Javadocs, if uncertain.
+Hint: Research the parseInt() method of the Integer class and make use of it to convert your Strings to ints.
+
+Additional source of information: Wikipedia
+What to Submit:
+When you are satisfied your program is working properly, submit the following to Canvas:
+Halleys.java (only one partner)
+Pair Programming Contract (both partners)
+Please submit these files separately - no zip or compressed files (5 point deduction)
+Please use the default package or remove your package statement before submitting (5 point deduction)
+
+How You Will Be Graded:
+100 points: The assignment works as shown in the sample output. All required features are implemented and implemented correctly.
+80-100 points: The assignment works mostly as shown in the sample output. Most required features are implemented and implemented correctly. Wording or spacing choices may differ from those shown.
+40-80 points: Some of the assignment works as shown in the sample output. Some required features are implemented and implemented correctly.
+10-40 points: Serious problems in implementation and little correspondence between sample output and what is shown. Few of the features implemented or implemented correctly.
+0 points: Code does not compile or outputs an error at runtime.
+Incorrect formatting (indentation) and incorrect or missing Javadoc comments will each lead to a 5 point deduction.
+ 
+
+Sign in|Report Abuse|Print Page|Powered By Google Sites
