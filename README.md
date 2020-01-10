@@ -1,2 +1,2 @@
-# De-Anza-College-CIS-36A
-self-study
+# De-Anza-College-CIS-36B
+2020 winter
