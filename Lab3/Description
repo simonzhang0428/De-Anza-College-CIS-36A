@@ -1,0 +1,456 @@
+Lab 2: Adding and Removing from Arrays (100 pts)
+due Thursday, January 16 at 11:59pm on Canvas
+
+Pair Programming Required (or no Credit)
+Both partners fill in, sign, date, and submit the pair programming contract
+Upload the document(s) along with your Lab code to Canvas.
+Only ONE partner submits the Lab code on Canvas.
+BOTH partners submit the contract.
+
+TEXTING TRANSLATOR
+
+For this assignment, we are going to work with adding and removing data from arrays, linear search, and File I/O.
+
+This program will act as a texting to English converter
+
+This program will read a file containing a list of abbreviations used in texting and another file with their English translations. 
+
+The abbreviations and translations need to be stored in two separate but parallel arrays.
+
+In other words, the indices of the abbreviations array will match the indices of the translations array.
+
+Thus the abbreviation at index 0, will match the translation at index 0, etc
+
+Open up two new text files inside of Eclipse:
+
+Name these text files abbreviations.txt and translations.txt
+
+Copy and paste the following list of names into your abbreviations.txt file:
+
+4
+
+cu
+
+ikr
+
+k
+
+l8
+
+l8r
+
+lmk
+
+m8
+
+nvm
+
+r
+
+smh
+
+u
+
+ur
+
+wu
+
+Copy and paste the following list of translations into your translations.txt file:
+
+for
+
+see you
+
+I know right?
+
+okay
+
+late
+
+later
+
+let me know
+
+mate
+
+never mind
+
+are
+
+shaking my head
+
+you
+
+you are
+
+what's up?
+
+Read the contents of each file and store them in a separate arrays, one array called abbrevations and one array called translations.
+
+You should declare arrays of length 150, and separately store information about the current number of values stored inside of the two arrays.
+
+Hint: you can use a variable to count how many values are in each file as you are reading in the data, and use this information to save the number of values currently stored in each array.
+
+Next, you will need to write a menu-driven program to allow the user to complete 3 tasks:
+
+Add an Abbreviation
+
+Remove an Abbreviation
+
+Search for a Translation
+
+Exit
+
+For the add menu option, the program should do the following:
+
+Prompt the user for an abbreviation and its transation to insert, and a position in the arrays at which to insert.
+
+Call the insert method twice to insert the name and score into the respective arrays at the indicated position (index).
+
+For the remove menu option, the program should do the following:
+
+Prompt the user for the abbreviation to remove.
+
+Next, call linearSearch to determine at which index in the array the abbreviation is placed
+
+Confirm that it has located the correct abbreviation in the array by verifying the user wishes to remove the abbreviation.
+
+Finally, call the remove method to remove both the abbreviation from the abbreviations array and the translation from the translations array
+
+For the search for a translation menu option, the program should do the following:
+
+Prompt the user for the abbreviation.
+
+Next, call linearSearch to determine at which index in the array the abbreviation is placed
+
+Print the translation that is located at that same index.
+
+For the exit menu option, the program should do the following:
+
+Prompt the user to enter the name of a file in which to print the abbreviations and translations
+
+call the printFile method passing in the name of the indicated file
+
+To begin, copy and paste the starter code into a file called TextTrans.java
+
+Make sure that you implement and call all of the methods whose signatures are specified below
+
+Note that you made add any additional methods that you like to complete the program
+
+When your program is working correctly, upload it to Canvas.
+
+
+Starter Code
+
+/**
+
+* @author
+
+* @author
+
+* CIS 36B
+
+*/
+
+import java.util.Scanner;
+
+import java.io.File;
+
+import java.io.IOException;
+
+import java.io.PrintWriter;
+
+
+public class TextTrans {
+
+    
+
+    public static void main(String[] args) throws IOException {
+
+      
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Welcome to the Texting Translator!");
+
+
+        System.out.println("\nGoodbye!");     
+
+    }
+
+
+    
+
+    /**
+
+     * Inserts a String element into an array at a specified index
+
+     * @param array the list of String values
+
+     * @param numElements the current number of elements stored
+
+     * @indexToInsert the location in the array to insert the new element
+
+     * @param newValue the new String value to insert in the array
+
+     */
+
+  
+
+    public static void insert(String array[], int numElements,
+
+            int indexToInsert, String newValue) {
+
+      
+
+    }
+
+    
+
+    /**
+
+     * Removes a String element from an array at a specified index
+
+     * @param array the list of String values
+
+     * @param numElements the current number of elements stored
+
+     * @param indexToRemove where in the array to remove the element
+
+     */
+
+    
+
+    public static void remove(String array[], int numElements, int indexToRemove) {
+
+        return;
+
+    }
+
+
+    /**
+
+     * Print an array of Strings either to the console
+
+     * or a file
+
+     * @param names the list of abbreviations
+
+     * @param translations the list of corresponding translations
+
+     * @param numElements the current number of elements stored
+
+     * @param file the file name
+
+     */
+
+    public static void printFile(String[] abbreviations, String[] translations,
+
+            int numElements, String file) throws IOException {
+
+        return;
+
+    }
+
+    
+
+   /**
+
+    * Searches for a specified String in a list
+
+    * @param array the array of Strings
+
+    * @param value the String to serach for
+
+    * @param numElements the number of elements in the list
+
+    * @return the index where value is located in the array
+
+    */
+
+   public static int linearSearch(String array[], String value, int numElements) {
+
+       return -1;
+
+   }
+
+
+}
+
+
+
+Sample Output
+
+
+Welcome to the Texting Translator!
+
+Below are the texting abbreviations:
+
+0. 4
+1. cu
+2. ikr
+3. k
+4. l8
+5. l8r
+6. lmk
+7. m8
+8. nvm
+9. r
+10. smh
+11. u
+12. ur
+13. wu
+
+Please enter a menu option (A, R, S, X) below:
+
+A. Add an Abbreviation
+R. Remove an Abbreviation
+S. Search for a Translation
+X. Exit
+
+Please enter your choice: A
+
+Enter the abbreviation: rofl
+Enter the position at which to add rofl: 10
+Enter the translation of rofl: rolling on the floor laughing
+
+
+Below are the texting abbreviations:
+
+0. 4
+1. cu
+2. ikr
+3. k
+4. l8
+5. l8r
+6. lmk
+7. m8
+8. nvm
+9. r
+10. rofl
+11. smh
+12. u
+13. ur
+14. wu
+
+Please enter a menu option (A, R, S, X) below:
+
+A. Add an Abbreviation
+R. Remove an Abbreviation
+S. Search for a Translation
+X. Exit
+
+Please enter your choice: R
+
+Please enter the abbreviation to remove: l8
+
+Removing l8...
+Is this correct (y/n): y
+
+l8 has been removed.
+
+Below are the texting abbreviations:
+
+0. 4
+1. cu
+2. ikr
+3. k
+4. l8r
+5. lmk
+6. m8
+7. nvm
+8. r
+9. rofl
+10. smh
+11. u
+12. ur
+13. wu
+
+Please enter a menu option (A, R, S, X) below:
+
+A. Add an Abbreviation
+R. Remove an Abbreviation
+S. Search for a Translation
+X. Exit
+
+Please enter your choice: S
+
+Enter the abbreviation: u
+
+The abbreviation "u" means: you
+
+Below are the texting abbreviations:
+
+0. 4
+1. cu
+2. ikr
+3. k
+4. l8r
+5. lmk
+6. m8
+7. nvm
+8. r
+9. rofl
+10. smh
+11. u
+12. ur
+13. wu
+
+Please enter a menu option (A, R, S, X) below:
+
+A. Add an Abbreviation
+R. Remove an Abbreviation
+S. Search for a Translation
+X. Exit
+
+Please enter your choice: X
+
+Enter the name of a file to write your abbreviations: output.txt
+
+Goodbye!
+Contents of corresponding output file (output.txt in my example - but user should specify the name):
+
+0. 4: for
+
+1. cu: see you
+
+2. ikr: I know right?
+
+3. k: okay
+
+4. l8r: later
+
+5. lmk: let me know
+
+6. m8: mate
+
+7. nvm: never mind
+
+8. r: are
+
+9. rofl: rolling on the floor laughing
+
+10. smh: shaking my head
+
+11. u: you
+
+12. ur: you are
+
+13. wu: what's up?
+
+Note that the user should be able to enter any file name of their choice. It does not have to be output.txt.
+
+Note that no error checking is required. You may assume that the user enters the inputs correctly.
+
+What to Submit:
+Submit your completed TextTrans.java file (make sure both your names are on the file) to Canvas.
+One partner submits TextTrans.java. Both partners submit the pair programming contract.
+5 point deduction for missing contract
+Please use the default package or remove any package statements from the top of your files before submission (5 point deduction)
+Please do not submit your work as a zip file (5 point deduction)
+How You Will Be Graded:
+100 points: The assignment works as shown in the sample output. All required features are implemented and implemented correctly.
+80-100 points: The assignment works mostly as shown in the sample output. Most required features are implemented and implemented correctly. Wording or spacing choices may differ from those shown
+40-80 points: Some of the assignment works as shown in the sample output. Some required features are implemented and implemented correctly.
+10-40 points: Serious problems in implementation and little correspondence between sample output and what is shown. Few of the features implemented or implemented correctly.
+0 points: Code does not compile or outputs an error at runtime.
