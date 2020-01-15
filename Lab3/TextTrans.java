@@ -22,7 +22,6 @@ public class TextTrans {
         //how to rename one variable， 右键refactor->rename
 
         //read file into parallel array
-        File infile = new File("abbreviation.txt");
         Scanner inputAbb = new Scanner("abbreviation.txt");
         Scanner inputTrans = new Scanner("translation.txt");
 
